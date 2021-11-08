@@ -1,11 +1,33 @@
 @base = http://localhost:3000
 
+### Obter todos os usuários
+GET {{base}}/users
+
+### Obter um usuário pelo ID
+GET {{base}}/users/6182d2d4c92ef39ba402dbdd
+
 ### Criar usuário
 POST {{base}}/users
 Content-Type: application/json
 
 {
-  "name": "Juca de Oliveira",
-  "email": "juca@gmail.com",
+  "name": "Ana Flávia Ferreira",
+  "email": "ana@gmail.com",
   "password": "1234"
 }
+
+
+### Atualizar usuário
+PUT {{base}}/users
+Content-Type: application/json
+
+{
+  "id": "6182d2d4c92ef39ba402dbdd",
+  "name": "Diana Marcondes",
+  "email": "diana@gmail.com",
+  "password": "1234"
+}
+
+
+### Deletar um usuário
+DELETE {{base}}/users/6182d2e0c92ef39ba402dbdf
