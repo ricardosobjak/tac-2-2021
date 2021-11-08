@@ -1,0 +1,22 @@
+@base = http://localhost:5000
+
+#### Obter todos os usuários
+GET {{base}}/user?page=5
+
+#### Obter um usuário
+GET {{base}}/user/3
+
+#### Criar um usuário
+POST {{base}}/user
+Content-Type: application/json
+
+{
+  "name": "Marcelo Silva",
+  "mail": "ms@gmail.com"
+}
+
+#### Atualizar um usuário
+PUT {{base}}/user
+
+#### Remover um usuário
+DELETE {{base}}/user/3
