@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const User = require('../models/User');
 
+const isAuthorized = require('../middlewares/isAuthorized');
+
 /**
  * Criando um usuário
  */
@@ -26,14 +28,14 @@ router.post('/', async (req, res) => {
 /**
  * Obter todos os usuários
  */
-router.get('/', async (req, res) => {
+router.get('/', isAuthorized, async (req, res) => {
   res.json(await User.find());
 });
 
 /**
  * Obter um usuário pelo ID
  */
-router.get('/:id', async (req, res) => {
+router.get('/:id', isAuthorized, async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -51,7 +53,7 @@ router.get('/:id', async (req, res) => {
 /**
  * Atualizar um usuário
  */
-router.put('/', async (req, res) => {
+router.put('/', isAuthorized, async (req, res) => {
   const json = req.body;
 
   let user = await User.findById(json.id);
@@ -77,7 +79,7 @@ router.put('/', async (req, res) => {
 /**
  * Deletar um usuário
  */
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', isAuthorized, async (req, res) => {
   const { id } = req.params;
 
   //if (req.userId != id) return res.status(403).json({ message: 'Sem permissão para deletar o usuário.' });

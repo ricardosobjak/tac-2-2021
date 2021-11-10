@@ -1,10 +1,16 @@
 @base = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODk2MzM3MTM1MTgzMmM2MzA1ZGRkMiIsImVtYWlsIjoiYW5hQGdtYWlsLmNvbSIsImlhdCI6MTYzNjU2NTIyNiwiZXhwIjoxNjM2NTY1MjI2fQ.7ymZajs219Np6y02tKEiBrKqzIk10Pm6E4O1Rfalh6Y
+
+
 
 ### Obter todos os usuários
 GET {{base}}/users
+Authorization: {{token}}
+
 
 ### Obter um usuário pelo ID
 GET {{base}}/users/6182d2d4c92ef39ba402dbdd
+Authorization: {{token}}
 
 ### Criar usuário
 POST {{base}}/users
@@ -20,6 +26,7 @@ Content-Type: application/json
 ### Atualizar usuário
 PUT {{base}}/users
 Content-Type: application/json
+Authorization: {{token}}
 
 {
   "id": "6182d2d4c92ef39ba402dbdd",
@@ -31,3 +38,4 @@ Content-Type: application/json
 
 ### Deletar um usuário
 DELETE {{base}}/users/6182d2e0c92ef39ba402dbdf
+Authorization: {{token}}

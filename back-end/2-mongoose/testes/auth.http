@@ -1,0 +1,11 @@
+@base = http://localhost:3000
+
+### Fazer o login
+POST {{base}}/auth
+Content-Type: application/json
+Token-timeout: 5
+
+{
+  "email": "ana@gmail.com",
+  "password": "1234"
+}
