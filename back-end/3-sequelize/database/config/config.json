@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "tdvfwqfb",
+    "password": "gLY1S4FvYX_dVnyeB9TQAJmN2UQ9fS9K",
+    "database": "tdvfwqfb",
+    "host": "tuffi.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "tdvfwqfb",
+    "password": "gLY1S4FvYX_dVnyeB9TQAJmN2UQ9fS9K",
+    "database": "tdvfwqfb",
+    "host": "tuffi.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "tdvfwqfb",
+    "password": "gLY1S4FvYX_dVnyeB9TQAJmN2UQ9fS9K",
+    "database": "tdvfwqfb",
+    "host": "tuffi.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
