@@ -1,0 +1,32 @@
+@url = http://localhost:3000
+
+### Criar usuário
+POST {{url}}/users
+Content-Type: application/json
+
+{
+  "name": "Juca",
+  "email": "juca@qlsdsdf.com",
+  "password": "1234"
+}
+
+### Atualizar o usuário
+PUT {{url}}/users/3
+Content-Type: application/json
+
+{
+  "name": "Marcelo",
+  "email": "juca@qlsdsdf.com",
+  "password": "1234"
+}
+
+### Buscar todos
+GET {{url}}/users
+
+
+### Buscar um usuário pelo ID
+GET {{url}}/users/3
+
+
+### Deletar user
+DELETE {{url}}/users/3
