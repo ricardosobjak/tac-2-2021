@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: UserListComponent },
+  { path: 'new', component: UserFormComponent },
+  { path: ':id', component: UserFormComponent }
+];
+
+@NgModule({
+  declarations: [
+    UserFormComponent,
+    UserListComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes)
+  ]
+})
+export class UserModule { }

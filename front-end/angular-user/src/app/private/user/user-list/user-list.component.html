@@ -1,0 +1,20 @@
+<h3>
+  {{ TITLE }}
+</h3>
+
+
+<table class="table table-striped">
+  <tr>
+    <th></th>
+    <th>Nome</th>
+    <th>E-mail</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>x</td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td></td>
+  </tr>
+</table>
